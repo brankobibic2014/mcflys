@@ -1,0 +1,20 @@
+// Place all the styles related to the Reviews controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+.review {
+	border-bottom: solid 1px #CCC;
+	padding: 5px 0;
+}
+
+.review .well{
+	margin: 4px 0;
+}
+
+.review .admin {
+	display: none;
+}
+
+.review.hover .admin{
+	display: inline;
+}
+

@@ -1,0 +1,21 @@
+<div class="page-header">
+  <h1>Word On The Street</h1>
+</div>
+
+<%= link_to "Write a New Review", new_review_path, class: "btn btn-success" %>
+
+<% @reviews.each do |review| %>
+  <div class="review">
+    <strong>Customer: <%= review.name %></strong> 
+    <div>Barber: <%= review.barber %></div>
+    <div>Rating: <%= review.rating %></div>
+    <div class="well"><%= review.content %></div>
+    <div class="options>
+      <%= link_to time_ago_in_words(review.created_at) + " ago",review %> |
+      <span class="admin">
+        <%= link_to "Edit", edit_review_path(review) %> |
+        <%= link_to "Delete", review, method: :delete, data: {confirm: "Are you absolutely sure you wish to delete this review?"} %>
+      </span>
+    </div>
+  </div>
+<% end %>
