@@ -1,4 +1,6 @@
 Mcflys::Application.routes.draw do
+  get "homepage/show"
+
   get "bookings/show"
 
   devise_for :users
