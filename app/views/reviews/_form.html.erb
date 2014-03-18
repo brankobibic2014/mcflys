@@ -11,21 +11,93 @@
     </div>
 
   <% end %>
+  <div class="row">
+    <div class="col-md-6 col-md-offset-3">  
+      <div class="page-header">
+        <h1>Express Yourself</h1>
+        <p class="lead">
+          At McFlys we value your opinion. Here's your chance to tell us about your experience.
+        </p>
+      </div>  
+    </div>
+  </div>
 
-  <div class="field">
-    <%= f.label :name %><br />
-    <%= f.text_field :name %>
-  </div>
-  <div class="field">
-    <%= f.label :barber %><br />
-    <%= f.text_field :barber %>
-  </div>
-  <div class="field">
-    <%= f.label :rating %><br />
-    <%= f.number_field :rating %>
-  </div>
-   <%= f.input :content %>
-  <div class="form-actions">
-    <%= f.button :submit %>
-  </div>
+  <div class="row">
+    <div class="col-md-4 col-md-offset-4">  
+      <div class="well well-lg">
+
+      <div class="row">
+        <div class="field">
+          <div class="col-md-2"><%= f.label :name %></div>
+          <div class="col-md-8">
+          <%= f.text_field :name %>
+        </div>
+        <br>
+        </div>
+        <br>
+      </div>
+
+      <div class="row">
+        <div class="field">
+          
+           <div class="col-md-10">
+              <!--<select class="form-control">
+                <option>Pick One</option>
+                <option>1 Star</option>
+                <option>2 Stars</option>
+                <option>3 Stars</option>
+                <option>4 Stars</option>
+                <option>5 Stars</option>
+            </select>-->
+            
+            <%= f.input :rating, :collection => ["1 Star", "2 Star"], :prompt => "Rating" %>
+                       <br>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="field">
+          <div class="col-md-2"><%= f.label :barber %></div>
+          <div class="col-md-10">
+            <!-- <select multiple class="form-control">
+               <option>Jason Potchen</option>
+                <option>Mark Ripple</option>
+                <option>Brandon Smith</option>
+                <option>Harvey Walhberg</option>
+                <option>Carson Smith</option>
+                <option>Louie Hamilton</option>
+            </select>
+          -->
+          <%= f.input :barber, :collection => ["Johnny","Rick"], :prompt => "Pick One" %>
+            <br>
+          </div>
+        </div>
+      </div>
+
+        <div class="field_content">
+          </div class="col-md-2"><%= f.input :content%></div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-4 col-md-offset-4">  
+    
+        
+              <button type="button" class="btn btn-sm">
+                  <%= f.button :submit %>
+              </button>
+              <button type="button" class="btn btn-default btn-lg">
+                  <%= link_to 'Cancel', reviews_path %>
+              </button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>   
+
+
+  
+    
+ 
 <% end %>
