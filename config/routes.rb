@@ -1,4 +1,7 @@
 Mcflys::Application.routes.draw do
+  resources :appointments
+
+
   get "homepage/show"
 
   get "bookings/show"

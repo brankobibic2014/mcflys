@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  service: MyString
+  barber: MyString
+  timeslot: 2014-03-18 20:17:45
+  customer: MyString
+  phone: MyString
+
+two:
+  service: MyString
+  barber: MyString
+  timeslot: 2014-03-18 20:17:45
+  customer: MyString
+  phone: MyString

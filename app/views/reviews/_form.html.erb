@@ -41,16 +41,9 @@
         <div class="field">
           
            <div class="col-md-10">
-              <!--<select class="form-control">
-                <option>Pick One</option>
-                <option>1 Star</option>
-                <option>2 Stars</option>
-                <option>3 Stars</option>
-                <option>4 Stars</option>
-                <option>5 Stars</option>
-            </select>-->
+             
             
-            <%= f.input :rating, :collection => ["1/5 Star", "2 Star"], :prompt => "Rating" %>
+            <%= f.input :rating, :collection => ["1/5 Star", "2/5 Stars", "3/5 Stars", "4/5 Stars", "5/5 Stars"], :prompt => "Pick One" %>
                        <br>
           </div>
         </div>
@@ -60,16 +53,8 @@
         <div class="field">
  
           <div class="col-md-10">
-            <!-- <select multiple class="form-control">
-               <option>Jason Potchen</option>
-                <option>Mark Ripple</option>
-                <option>Brandon Smith</option>
-                <option>Harvey Walhberg</option>
-                <option>Carson Smith</option>
-                <option>Louie Hamilton</option>
-            </select>
-          -->
-          <%= f.input :barber, :collection => ["Johnny Cash","Rick"], :prompt => "Pick One" %>
+          
+          <%= f.input :barber, :collection => ["Jason Potchen","Rick Ross", "Mark Ripple", "Brandon Smith", "Carson Smith", "Louie Hamilton"], :prompt => "Pick One" %>
             <br>
           </div>
         </div>

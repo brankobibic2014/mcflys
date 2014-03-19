@@ -1,0 +1,30 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Service:</b>
+  <%= @appointment.service %>
+</p>
+
+<p>
+  <b>Barber:</b>
+  <%= @appointment.barber %>
+</p>
+
+<p>
+  <b>Timeslot:</b>
+  <%= @appointment.timeslot %>
+</p>
+
+<p>
+  <b>Customer:</b>
+  <%= @appointment.customer %>
+</p>
+
+<p>
+  <b>Phone:</b>
+  <%= @appointment.phone %>
+</p>
+
+
+<%= link_to 'Edit', edit_appointment_path(@appointment) %> |
+<%= link_to 'Back', :controller=>"homepage", :action=>"show" %>
